@@ -6,11 +6,13 @@ import { MaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PlayerComponent } from './pages/player/player.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlayerComponent
+    PlayerComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
