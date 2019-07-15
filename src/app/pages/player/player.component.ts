@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { AudioService } from '../../services/audio.service';
 import { CloudService } from '../../services/cloud.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { StreamState } from '../../interfaces/stream-state';
 
 @Component({
@@ -16,7 +17,8 @@ export class PlayerComponent {
   currentFile: any = {};
 
   constructor(public audioService: AudioService,
-    public cloudService: CloudService) {
+    public cloudService: CloudService,
+    public auth: AuthService) {
 
     // get media files
     cloudService.getFiles().subscribe(files => {
